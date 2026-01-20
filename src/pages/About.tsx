@@ -8,7 +8,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              About FarmData
+              About AgriPulse
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Empowering agriculture with data while protecting farmer privacy
@@ -24,10 +24,10 @@ const About: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-4">
-                FarmData bridges the gap between Nigerian farmers and the agricultural ecosystem by providing valuable, aggregated insights while maintaining strict privacy standards.
+                AgriPulse bridges the gap between farmers and the agricultural ecosystem by providing valuable, aggregated insights while maintaining strict privacy standards.
               </p>
               <p className="text-lg text-gray-600 mb-4">
-                We believe that data-driven agriculture can transform food security, improve farmer livelihoods, and create sustainable growth across Nigeria's agricultural sector.
+                We believe that data-driven agriculture can transform food security, improve farmer livelihoods, and create sustainable growth across the global agricultural sector.
               </p>
               <p className="text-lg text-gray-600">
                 By anonymizing and aggregating farmer data, we enable businesses, researchers, and policymakers to make informed decisions without compromising individual farmer privacy.
@@ -97,7 +97,7 @@ const About: React.FC = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Compliance First</h3>
-              <p className="text-gray-600">GDPR, CCPA, and Nigerian Data Protection Regulation compliant</p>
+              <p className="text-gray-600">GDPR, CCPA, and global data protection regulations compliant</p>
             </div>
           </div>
         </div>

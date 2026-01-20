@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
               Request Access
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              Get started with agricultural intelligence. Join leading organizations using FarmData insights.
+              Get started with agricultural intelligence. Join leading organizations using AgriPulse insights.
             </p>
           </div>
         </div>
@@ -186,8 +186,8 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Email</h3>
-              <p className="text-gray-600">info@farmdata.ng</p>
-              <p className="text-gray-600 text-sm">support@farmdata.ng</p>
+              <p className="text-gray-600">info@agripulse.com</p>
+              <p className="text-gray-600 text-sm">support@agripulse.com</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg card-shadow text-center">
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Phone</h3>
-              <p className="text-gray-600">+234 800 123 4567</p>
+              <p className="text-gray-600">234 800 123 4567</p>
               <p className="text-gray-600 text-sm">Mon-Fri 9AM-5PM WAT</p>
             </div>
             
@@ -209,8 +209,8 @@ const Contact: React.FC = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Office</h3>
-              <p className="text-gray-600">Lagos, Nigeria</p>
-              <p className="text-gray-600 text-sm">Victoria Island</p>
+              <p className="text-gray-600">Abuja, Nigeria</p>
+              <p className="text-gray-600 text-sm">Financial District</p>
             </div>
           </div>
         </div>

@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <div className="w-8 h-8 bg-primary-600 rounded-lg mr-3 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">F</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">FarmData</span>
+              <span className="text-xl font-bold text-gray-900">AgriPulse</span>
             </Link>
           </div>
           

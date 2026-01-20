@@ -45,5 +45,17 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"
+  },
+  "description": "y",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dera-Enebeli/Nigeria-Agricultural-Insights-Pilot-NAIP-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dera-Enebeli/Nigeria-Agricultural-Insights-Pilot-NAIP-/issues"
   }
 }
+

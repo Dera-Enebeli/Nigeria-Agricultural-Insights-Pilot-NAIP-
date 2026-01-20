@@ -10,12 +10,12 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Real-time Farm Intelligence
+              Real-time Agricultural Intelligence
               <br />
-              <span className="text-primary-200">from Nigerian Farmers</span>
+              <span className="text-primary-200">Powered by AgriPulse</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto animate-slide-in-left">
-              Aggregated, anonymous insights on crops, yields, risks, and seasons
+              Aggregated, anonymous agricultural data insights from farmer cooperatives worldwide
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-right">
               <Link to="/contact" className="btn-secondary text-lg hover-lift">
@@ -234,14 +234,14 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg card-shadow">
-              <h3 className="font-semibold text-lg mb-4 text-center">Maize Planting Trend – Ogun (Demo)</h3>
-              <SampleChart type="line" title="Maize Planting Trend" />
+              <h3 className="font-semibold text-lg mb-4 text-center">Crop Planting Trends – Regional (Demo)</h3>
+              <SampleChart type="line" title="Crop Planting Trend" />
               <p className="text-sm text-gray-500 text-center mt-4">Sample data for demonstration purposes</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg card-shadow">
-              <h3 className="font-semibold text-lg mb-4 text-center">Expected Rice Harvest Window – Q3 (Demo)</h3>
-              <SampleChart type="bar" title="Rice Harvest Timeline" />
+              <h3 className="font-semibold text-lg mb-4 text-center">Expected Harvest Timelines – Seasonal (Demo)</h3>
+              <SampleChart type="bar" title="Harvest Timeline" />
               <p className="text-sm text-gray-500 text-center mt-4">Sample data for demonstration purposes</p>
             </div>
           </div>

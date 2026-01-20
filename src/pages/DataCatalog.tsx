@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SampleChart from '../components/SampleChart';
+import RequestSampleModal from '../components/RequestSampleModal';
 
 const DataCatalog: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedDataset, setSelectedDataset] = useState('');
+
   const dataCategories = [
     {
       id: 1,
@@ -53,6 +58,28 @@ const DataCatalog: React.FC = () => {
     }
   ];
 
+  const getCategoryPath = (categoryName: string): string => {
+    const categoryMap: { [key: string]: string } = {
+      'Crop Planting Trends': 'crop-data',
+      'Expected Harvest Timelines': 'crop-data',
+      'Yield Ranges': 'crop-data',
+      'Input Demand Signals': 'market-data',
+      'Market Insights': 'market-data',
+      'Risk Alerts': 'risk-analysis',
+      'Climate Impact Analysis': 'risk-analysis',
+      'Operational Risk Index': 'risk-analysis',
+      'Regional Performance Benchmarks': 'regional-insights',
+      'Infrastructure Capacity Analysis': 'regional-insights',
+      'Regional Economic Impact': 'regional-insights'
+    };
+    return categoryMap[categoryName] || 'data';
+  };
+
+  const handleRequestSample = (datasetName: string) => {
+    setSelectedDataset(datasetName);
+    setIsModalOpen(true);
+  };
+
   return (
     <div>
       {/* Header */}
@@ -73,11 +100,11 @@ const DataCatalog: React.FC = () => {
       <section className="py-8 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="px-4 py-2 bg-primary-600 text-white rounded-lg">All Categories</button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Crop Data</button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Market Data</button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Risk Analysis</button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Regional Insights</button>
+            <Link to="/data" className="px-4 py-2 bg-primary-600 text-white rounded-lg">All Categories</Link>
+            <Link to="/data/crop-data" className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Crop Data</Link>
+            <Link to="/data/market-data" className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Market Data</Link>
+            <Link to="/data/risk-analysis" className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Risk Analysis</Link>
+            <Link to="/data/regional-insights" className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Regional Insights</Link>
           </div>
         </div>
       </section>
@@ -119,10 +146,18 @@ const DataCatalog: React.FC = () => {
                   </div>
                   
                   <div className="flex gap-4">
-                    <button className="flex-1 btn-primary">Request Sample</button>
-                    <button className="flex-1 border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium py-2 px-4 rounded-lg transition-colors duration-200">
-                      Learn More
+                    <button 
+                      className="flex-1 btn-primary"
+                      onClick={() => handleRequestSample(category.name)}
+                    >
+                      Request Sample
                     </button>
+                    <Link 
+                      to={`/data/${getCategoryPath(category.name)}`}
+                      className="flex-1 border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-center"
+                    >
+                      Learn More
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -145,6 +180,13 @@ const DataCatalog: React.FC = () => {
           </button>
         </div>
       </section>
+
+      {/* Request Sample Modal */}
+      <RequestSampleModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        datasetName={selectedDataset}
+      />
     </div>
   );
 };
