@@ -9,7 +9,6 @@ import MarketData from './pages/MarketData';
 import RiskAnalysis from './pages/RiskAnalysis';
 import RegionalInsights from './pages/RegionalInsights';
 // import TestPage from './TestPage';
-// import HomeSimple from './HomeSimple';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
