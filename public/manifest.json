@@ -1,0 +1,22 @@
+{
+  "short_name": "AgriPulse",
+  "name": "AgriPulse - Agricultural Intelligence Platform",
+  "description": "Real-time agricultural intelligence from farmer cooperatives worldwide. Aggregated, anonymous insights on crops, yields, risks, and seasons.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#10B981",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}
